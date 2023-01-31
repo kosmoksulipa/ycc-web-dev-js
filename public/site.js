@@ -16,7 +16,13 @@ function addIten(data) {
 
   if (input.value !== '' && input.value !== null) {
     let newIten = document.createElement('li');
-    newIten.innerText = input.value;
+    newIten.classList.add('list-group-item')
+    let newBlock =
+      `<input class="form-check-input me-1" type="checkbox" value="">
+       <label class="form-check-label">${input.value}First checkbox</label>`;
+
+    newIten.innerHTML = newBlock;
+
     list.appendChild(newIten);
   }
   input.value = '';
